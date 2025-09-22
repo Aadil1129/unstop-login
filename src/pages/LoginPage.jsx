@@ -66,20 +66,8 @@ export default function LoginPage({ navigate }) {
   return (
     <div className="split">
       <div className="visual">
-        <div
-          style={{
-            height: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: 24,
-          }}
-        >
-          <img
-            src={illustration}
-            alt="Login illustration"
-            style={{ maxWidth: "450px", minWidth: "450px", height: "auto" }}
-          />
+        <div className="illustration-image-box">
+          <img src={illustration} alt="Login illustration" className="login-illustration" />
         </div>
       </div>
       <div className="content">
@@ -117,10 +105,10 @@ export default function LoginPage({ navigate }) {
                     <input
                       className="input floating-input"
                       type="text"
+                      name="username"
                       placeholder=" "
                       value={form.username}
                       onChange={(e) => setForm((f) => ({ ...f, username: e.target.value }))}
-                      style={{ fontWeight: "500", fontSize: "15px" }}
                     />
                     <span className="floating-label-inline">User name</span>
                   </div>
@@ -139,10 +127,10 @@ export default function LoginPage({ navigate }) {
                     <input
                       className="input floating-input"
                       type="email"
+                      name="email"
                       placeholder=" "
                       value={form.email}
                       onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-                      style={{ fontWeight: "500", fontSize: "15px" }}
                     />
                     <span className="floating-label-inline">Email</span>
                   </div>
@@ -160,9 +148,9 @@ export default function LoginPage({ navigate }) {
                       className="input floating-input"
                       type={showPassword ? "text" : "password"}
                       placeholder=" "
+                      name="password"
                       value={form.password}
                       onChange={(e) => setForm((f) => ({ ...f, password: e.target.value }))}
-                      style={{ fontWeight: "500", fontSize: "15px" }}
                     />
                     <span className="floating-label-inline">Password</span>
                   </div>
@@ -180,15 +168,7 @@ export default function LoginPage({ navigate }) {
               </div>
 
               <div className="row-between remember-row">
-                <label
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 8,
-                    color: "#374151",
-                    fontSize: 14,
-                  }}
-                >
+                <label className="row-between-container">
                   <input
                     className="checkbox"
                     type="checkbox"

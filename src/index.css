@@ -12,6 +12,18 @@
   margin-top: 0;
   margin-bottom: 16px;
 }
+.illustration-image-box {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.login-illustration {
+  max-width: 450px;
+  min-width: 450px;
+  margin: auto;
+}
 .social-col {
   display: grid;
   gap: 12px;
@@ -503,4 +515,15 @@ body {
 .field-icon-hide {
   width: 20px;
   height: 14px;
+}
+.floating-input {
+  font-weight: 500;
+  font-size: 15px;
+}
+.row-between-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #374151;
+  font-size: 14;
 }
