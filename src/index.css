@@ -211,6 +211,11 @@ body {
   border-radius: 12px;
   padding: 10px;
 }
+.field:focus-within {
+  border: 1px solid #6c63ff;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+  background: #fff;
+}
 .floating .input {
   padding: 20px 36px 10px 0; /* extra top padding creates space between label and typed text */
 }
