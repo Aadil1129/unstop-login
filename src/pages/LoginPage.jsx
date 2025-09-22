@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import illustration from "../images/illustration.png";
+import illustration from "../images/Illustration.png";
 import googleLogo from "../images/google.png";
 import facebookLogo from "../images/facebook.png";
 import userIcon from "../images/account_circle.png";
