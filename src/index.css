@@ -1,0 +1,484 @@
+.login-card {
+  width: 100%;
+  min-width: 500px;
+}
+.login-title {
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 26px;
+}
+.login-brand-purple {
+  color: #6c63ff;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.social-col {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.btn-PL {
+  padding-left: 16px;
+}
+.w34 {
+  width: 34px;
+  height: 34px;
+}
+.w28 {
+  width: 28px;
+  height: 28px;
+}
+.or-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0 18px;
+}
+.or-gray {
+  height: 1px;
+  background: rgb(200 200 200);
+}
+.muted {
+  margin: 0;
+  color: rgb(86 87 88);
+  font-size: 13px;
+  font-weight: 500;
+}
+.remember-row {
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+/* Base reset */
+* {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  font-family: inherit;
+}
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  color: #111827;
+  background: #f9fafb;
+}
+
+/* Layout helpers */
+.container {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+.card-body {
+  padding: 24px;
+}
+
+@media (max-width: 480px) {
+  .card-body {
+    padding: 16px;
+  }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  color: #374151;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+.btn img {
+  flex: 0 0 auto;
+}
+@media (max-width: 480px) {
+  .btn {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+.btn:hover {
+  background: #f9fafb;
+}
+.btn.primary {
+  background: #6c63ff;
+  border-color: #6c63ff;
+  color: #fff;
+}
+.btn.primary:hover {
+  background: #5a52e0;
+  border-color: #5a52e0;
+}
+.btn.light {
+  background: #f3f4f6;
+}
+.btn.danger {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: #fff;
+}
+.btn.danger:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+.btn.block {
+  width: 100%;
+}
+.btn:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 14px;
+}
+.label {
+  display: block;
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 6px;
+}
+.input-wrap {
+  display: flex;
+  align-items: center;
+}
+.input {
+  width: 100%;
+  padding: 10px 40px 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+@media (max-width: 480px) {
+  .input {
+    padding: 10px 36px 10px 12px;
+  }
+}
+.input:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+}
+.input-icon {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  color: #9ca3af;
+}
+.error-text {
+  margin-top: 6px;
+  color: #ef4444;
+  font-size: 12px;
+}
+
+/* Field block matching mock */
+.field {
+  background: #f3f4f6;
+  /* border: 1px solid #e5e7eb; */
+  border-radius: 12px;
+  padding: 10px;
+}
+.floating .input {
+  padding: 20px 36px 10px 0; /* extra top padding creates space between label and typed text */
+}
+.floating .floating-wrap {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.floating .floating-label-inline {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #383838;
+  pointer-events: none;
+  transition: all 0.15s ease;
+}
+.floating:focus-within .floating-label-inline,
+.floating .input:not(:placeholder-shown) + .floating-label-inline {
+  top: -2px;
+  transform: none;
+  font-size: 11px;
+  color: #383838;
+}
+.field-label {
+  display: block;
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+.field .input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.field .input {
+  flex: 1 1 auto;
+  background: transparent;
+  border: none;
+  padding: 8px 36px 0 0;
+  border-radius: 8px;
+  box-shadow: none;
+  margin-top: 8px;
+}
+.input-icon-left {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.input-icon-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: 12px;
+}
+@media (min-width: 768px) {
+  .grid.cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Sections */
+.split {
+  min-height: 100vh;
+  display: grid;
+  max-width: 1300px;
+  margin: auto;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 960px) {
+  .split {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.split .visual {
+  display: none;
+}
+@media (min-width: 960px) {
+  .split .visual {
+    display: block;
+  }
+}
+.split .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 0 6px;
+}
+@media (max-width: 480px) {
+  .title {
+    font-size: 24px;
+  }
+}
+.subtitle {
+  color: #6b7280;
+  margin: 0 0 16px;
+}
+
+.row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.checkbox {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  accent-color: #6c63ff;
+}
+.link {
+  color: #6c63ff;
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+.alert {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* ------------ App specific utility classes (for moving inline styles) ------------ */
+/* Home page */
+.home-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.home-heading {
+  text-align: center;
+}
+.welcome-title {
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 26px;
+}
+.brand-title {
+  color: #6c63ff;
+  margin-top: -4px;
+  margin-bottom: 16px;
+}
+
+.profile-card {
+  width: 280px;
+  text-align: center;
+}
+.profile-avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 9999px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 12px;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+.profile-name {
+  color: #4f46e5;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+.profile-email {
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 16px;
+}
+.profile-gender {
+  color: #9ca3af;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+.btn-narrow {
+  width: 60%;
+}
+
+/* Login heading */
+.login-heading {
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 26px;
+}
+.login-brand {
+  color: #6c63ff;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* Social buttons and divider */
+.social-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.btn-left {
+  justify-content: flex-start;
+  padding-left: 16px;
+}
+.text-15 {
+  font-size: 15px;
+}
+.icon-34 {
+  width: 34px;
+  height: 34px;
+}
+.icon-28 {
+  width: 28px;
+  height: 28px;
+}
+.or-divider {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0 18px;
+}
+.or-line {
+  height: 1px;
+  background: rgb(200 200 200);
+}
+.or-text {
+  margin: 0;
+  color: rgb(86 87 88);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.field-icon {
+  width: 18px;
+  height: 18px;
+}
+.field-icon-hide {
+  width: 20px;
+  height: 14px;
+}
