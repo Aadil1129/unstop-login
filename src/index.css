@@ -314,6 +314,23 @@ body {
   padding: 24px;
 }
 
+/* Responsive fixes for small screens */
+@media (max-width: 560px) {
+  .login-card {
+    min-width: auto;
+    width: 100%;
+  }
+  .visual img {
+    max-width: 80% !important;
+    min-width: auto !important;
+    height: auto;
+  }
+  .split {
+    max-width: none;
+    margin: 0;
+  }
+}
+
 .title {
   font-size: 28px;
   font-weight: bold;
